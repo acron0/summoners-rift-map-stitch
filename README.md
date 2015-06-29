@@ -11,6 +11,3 @@ Obviously, this image, it's likeness, yada yada, is drowning in Riot Games copyr
     hy fetch.hy
 	hy stitch.hy
 	
-## Known Issues
-
-Right now the fetcher hangs after downloading all the images. You can CTRL+C at this point and the stitcher will still work.

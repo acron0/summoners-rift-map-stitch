@@ -30,5 +30,13 @@
 		(for [col (iterate inc 0)]
 			(for [row (iterate inc 0)]
 				(if (download-frag col row)
-					(print (.format "Downloading {}/{}..." col row))
-					(break))))))
+					(do 
+						(print (.format "Downloaded {}/{}..." col row))
+						(setv fails 0))
+					(do 
+						(setv fails (inc fails))
+						(break))))
+			(do
+				(if (>= fails 2)
+				(break)))))
+	(print "Done. Now run `hy stitch.hy`."))
